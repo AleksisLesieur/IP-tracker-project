@@ -14,11 +14,7 @@ https://geo.ipify.org/service/account-balance?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SM
 
 amount of api calls left ^^
 
-
-        "lat": 54.68916,
-        "lng": 25.2798,
-
-        78.61.247.55
+random IP for testing
 
         146.70.106.138
 

@@ -1,0 +1,63 @@
+https://www.ipify.org/
+
+https://api64.ipify.org/?format=json 
+
+gets the ip address of the user
+
+fetch('https://dummyjson.com/products')
+.then(res => res.json())
+.then(console.log);
+
+testing api
+
+https://geo.ipify.org/service/account-balance?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN
+
+amount of api calls left ^^
+
+
+        "lat": 54.68916,
+        "lng": 25.2798,
+
+        78.61.247.55
+
+        146.70.106.138
+
+
+https://geo.ipify.org/api/v2/country,city?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN&ipAddress=8.8.8.8
+
+api itself ^^
+
+{
+  "ip": "8.8.8.8",
+  "location": {
+    "country": "US",
+    "region": "California",
+    "city": "Mountain View",
+    "lat": 37.38605,
+    "lng": -122.08385,
+    "postalCode": "94035",
+    "timezone": "-08:00",
+    "geonameId": 5375480
+  },
+  "domains": [
+    "leadmail.space",
+    "7965.net",
+    "aklaw.com.my",
+    "archwall.space",
+    "baiguorui.cn"
+  ],
+  "as": {
+    "asn": 15169,
+    "name": "GOOGLE",
+    "route": "8.8.8.0/24",
+    "domain": "https://about.google/intl/en/",
+    "type": "Content"
+  },
+  "isp": "Google LLC"
+}
+
+api response ^^
+
+https://mocki.io/v1/e07f5179-7fd8-4efc-873a-263d681313c6
+
+api url (fake one, therefore it doesn't cost credits!)

@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script defer src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h2>IP Address Tracker</h2>
+            <div class="searchBar">
+                <input id="ipSearch" type="text" placeholder="Search for any IP addresses">
+                <svg cursor="pointer" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H43C51.2843 0 58 6.71573 58 15V43C58 51.2843 51.2843 58 43 58H0V0Z" fill="black"/>
+                <path d="M26 23L32 29L26 35" stroke="white" stroke-width="3"/>
+                </svg>
+            </div>
+        </div>
+        <main>
+            <div class="main-data">
+                <div class="title">IP ADDRESS</div>
+                <div class="data data-ip">loading...</div>
+            </div>
+            <div class="main-data">
+                <div class="title">LOCATION</div>
+                <div class="data data-location">loading...</div>
+            </div>
+            <div class="main-data">
+                <div class="title">TIMEZONE</div>
+                <div class="data data-timezone">loading...</div>
+            </div>
+            <div class="main-data">
+                <div class="title">ISP</div>
+                <div class="data data-isp">loading...</div>
+            </div>
+        </main>
+    </header>
+    
+    <div id="map"></div>
+</body>
+
+</html>

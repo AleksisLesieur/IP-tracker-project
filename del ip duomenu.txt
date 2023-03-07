@@ -21,6 +21,8 @@ random IP for testing
 
 https://geo.ipify.org/api/v2/country,city?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN&ipAddress=8.8.8.8
 
+https://geo.ipify.org/api/v2/country,city?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN&ipAddress=8.8.8.8
+
 api itself ^^
 
 {

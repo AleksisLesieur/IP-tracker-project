@@ -19,7 +19,7 @@ header {
     background-repeat: no-repeat;
     /* background-size:100% 100%; */
     background-size: cover;
-    height: 280px;
+    height: 420px;
     /* position: relative;
     top: 0;
     left: 0;
@@ -84,7 +84,7 @@ main {
 }
 
 .main-data:not(:last-child) {
-    border-right: 1px solid rgba(0,0,0, 0.15);
+    /* border-right: 1px solid rgba(0,0,0, 0.15); */
 }
 
 .title {
@@ -175,9 +175,15 @@ main {
     } */
 }
 
-/* @media only screen and (max-width: 963px) {
+@media only screen and (max-width: 550px) {
     main {
-        height: 
+        width: 327px;
     }
-} */
+    header {
+        background-image: url('images/pattern-bg-desktop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 650px;
+    }
+}
 

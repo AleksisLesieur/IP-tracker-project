@@ -1,49 +1,3 @@
-// // navigator.geolocation.getCurrentPosition(getPosition);
-// let marker, circle, lat, long, accuracy;
-// var latlng = L.latLng(50.5, 30.5);
-// var corner1 = L.latLng(40.712, -74.227);
-// var corner2 = L.latLng(40.774, -74.125);
-// var bounds = L.latLngBounds(corner1, corner2);
-// map.panBy([200, 300]);
-// map.panBy(L.point(200, 300));
-
-// function getPosition() {
-// console.log(position)
-//   lat = position.coords.latitude;
-//   long = position.coords.longitude;
-//   accuracy = position.coords.accuracy / 2;
-// lat = 54.6627202;
-// long = 25.293591;
-// accuracy = 1673.307411212622;
-//   console.log(marker, circle);
-// if (marker) {
-//     map_init.removeLayer(marker)
-// }
-
-// if (circle) {
-//     map_init.removeLayer(circle)
-// }
-
-//   marker = L.marker([lat, long]).addTo(map);
-//   circle = L.circle([lat, long], { radius: accuracy }).addTo(map);
-
-//   let featureGroup = L.featureGroup([marker, circle]).addTo(map_init);
-
-//   console.log(map_init);
-
-//   map_init.fitBounds(featureGroup.getBounds());
-
-//   console.log(
-//     "Your coordinate is: Lat: " +
-//       lat +
-//       " Long: " +
-//       long +
-//       " Accuracy: " +
-//       accuracy
-//   );
-// }
-// getPosition();
-
 let marker = "";
 
 const main = document.querySelector("main");
@@ -52,21 +6,26 @@ let toggle = true;
 
 document.addEventListener("DOMContentLoaded", entireProject);
 
-// main.addEventListener("click", function () {
-//   if (toggle) {
-//     main.style.setProperty("z-index", "2");
-//     toggle = false;
-//   } else {
-//     main.style.setProperty("z-index", "2000");
-//     toggle = true;
-//   }
-// });
-
 const dataIP = document.querySelector(".data-ip");
 const dataLocation = document.querySelector(".data-location");
 const dataTimezone = document.querySelector(".data-timezone");
 const dataISP = document.querySelector(".data-isp");
+const dataCalls = document.querySelector(".data-calls");
 const svg = document.querySelector("svg");
+
+let amountLeft = 0;
+
+async function apiCallsLeft() {
+  await fetch(
+    "https://geo.ipify.org/service/account-balance?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN"
+  )
+    .then((res) => res.json())
+    .then(function (data) {
+      amountLeft = data.credits;
+    });
+  dataCalls.innerHTML = amountLeft / 2;
+}
+apiCallsLeft();
 
 async function newSearch() {
   let result;
@@ -79,7 +38,6 @@ async function newSearch() {
     .then(function (data) {
       result = data;
     });
-  console.log(result);
   let coordinates = [result.location.lat, result.location.lng];
   console.log("coordinates" + coordinates);
   map_init.panTo(new L.LatLng(...coordinates));
@@ -98,18 +56,15 @@ async function newSearch() {
   resizing();
   accuracy = 1673.307411212622;
   let circle = L.circle(coordinates, { radius: accuracy }).addTo(map_init);
+
+  apiCallsLeft();
 }
-svg.addEventListener("click", function () {
-  console.log("clicked on SVG");
-});
 
 svg.addEventListener("click", newSearch);
 
 let reRender = true;
 
 let map_init;
-
-// svg.addEventListener("click", map.off());
 
 function ipSearch() {
   dataIP.innerHTML = result.ip;
@@ -129,10 +84,6 @@ function ipSearch() {
 
   let coordinates = [result.location.lat, result.location.lng];
 
-  // this is what must be rerendered
-
-  // map_init.panTo(new L.LatLng(40.737, -73.923));
-
   map_init.panTo(new L.LatLng(...coordinates));
 
   map_init = L.map("map", {
@@ -140,9 +91,10 @@ function ipSearch() {
     zoom: 13,
   });
   marker = L.marker(coordinates, { alt: "Vilnius" })
-    .addTo(map_init) // "Kyiv" is the accessible name of this marker
+    .addTo(map_init)
     .bindPopup("you are somewhere here...")
     .openPopup();
+  apiCallsLeft();
 }
 
 async function entireProject() {
@@ -170,14 +122,6 @@ async function entireProject() {
       result = data;
     });
   console.log(result2);
-  // await fetch(`https://mocki.io/v1/e07f5179-7fd8-4efc-873a-263d681313c6`, {
-  //   headers: { "Content-Type": "application/json" },
-  //   method: "GET",
-  // })
-  //   .then((res) => res.json())
-  //   .then(function (data) {
-  //     result = data;
-  //   });
 
   dataIP.innerHTML = result.ip;
   dataTimezone.innerHTML = result.location.timezone + " GMT";
@@ -221,4 +165,6 @@ async function entireProject() {
     .addTo(map_init) // "Kyiv" is the accessible name of this marker
     .bindPopup("you are somewhere here...")
     .openPopup();
+
+  apiCallsLeft();
 }

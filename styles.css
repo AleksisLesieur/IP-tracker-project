@@ -62,7 +62,7 @@ input[type=text] {
 } */
 
 main {
-    max-width: 1110px;
+    max-width: 1410px;
     min-height: 161px;
     background-color: white;
     width: 80%;
@@ -79,7 +79,7 @@ main {
 }
 
 .main-data {
-    width: 213px;
+    max-width: 213px;
     height: 75px;
 }
 
@@ -116,24 +116,8 @@ main {
         width: 269px;
         border-radius: 15px 0 0 15px;
         border: none;
-    }    
+    } 
 }
-
-/* making sure that the search icon is accessible for smaller screen sizes */
-
-/* @media only screen and (max-width: 2252px) {
-    .leaflet-control-geocoder, .leaflet-control, .leaflet-bar { 
-        position: relative !important;
-        top: 120px;
-    }
-}
-
-@media only screen and (max-width: 552px) {
-    .leaflet-control-geocoder, .leaflet-control, .leaflet-bar { 
-        position: relative !important;
-        top: 330px;
-    }
-} */
 
 @media only screen and (max-width: 1252px) {
     .main-data:not(:last-child) {
@@ -170,20 +154,19 @@ main {
         letter-spacing: -0.178571px;
         color: #2C2C2C;
     }
-    /* main {
-        min-height: 327px; 
-    } */
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 750px) {
     main {
         width: 327px;
+        display: flex;
+        flex-direction: column;
     }
     header {
         background-image: url('images/pattern-bg-desktop.png');
         background-repeat: no-repeat;
         background-size: cover;
-        height: 650px;
+        min-height: 800px;
     }
 }
 

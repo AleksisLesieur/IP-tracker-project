@@ -21,7 +21,6 @@ random IP for testing
 
 https://geo.ipify.org/api/v2/country,city?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN&ipAddress=8.8.8.8
 
-https://geo.ipify.org/api/v2/country,city?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN&ipAddress=8.8.8.8
 
 api itself ^^
 
@@ -59,3 +58,5 @@ api response ^^
 https://mocki.io/v1/e07f5179-7fd8-4efc-873a-263d681313c6
 
 api url (fake one, therefore it doesn't cost credits!)
+
+https://railway.app/

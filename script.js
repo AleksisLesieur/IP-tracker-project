@@ -23,7 +23,7 @@ async function apiCallsLeft() {
     .then(function (data) {
       amountLeft = data.credits;
     });
-  dataCalls.innerHTML = amountLeft / 2;
+  dataCalls.innerHTML = Math.trunc(amountLeft / 2);
 }
 apiCallsLeft();
 

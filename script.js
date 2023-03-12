@@ -158,7 +158,7 @@ async function entireProject() {
   // @ViewChild('map') mapContainer;
 
   marker = L.marker(coordinates, { alt: "Vilnius" })
-    .addTo(map_init) // "Kyiv" is the accessible name of this marker
+    .addTo(map_init)
     .bindPopup("you are somewhere here...")
     .openPopup();
 

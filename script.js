@@ -168,3 +168,7 @@ async function entireProject() {
 
   apiCallsLeft();
 }
+
+console.log(
+  "Hello there! It's Aleksis, the developer of this application! Just wanted to let you know that I'm aware the amount of API calls left do not appear, I'm currently fixing this. However, it's still possible to see it! All you have to do is enable CORS in your browser, that is all!"
+);

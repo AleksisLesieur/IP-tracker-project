@@ -11,6 +11,8 @@ const svg = document.querySelector("svg");
 
 let amountLeft = 0;
 
+let accuracy = 3673.307411212622;
+
 async function apiCallsLeft() {
   await fetch(
     "https://geo.ipify.org/service/account-balance?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN"
@@ -50,7 +52,6 @@ async function newSearch() {
     }
   }
   resizing();
-  accuracy = 3673.307411212622;
   let circle = L.circle(coordinates, { radius: accuracy }).addTo(map_init);
 
   apiCallsLeft();
@@ -153,7 +154,6 @@ async function entireProject() {
   console.log(osm);
   L.Control.geocoder().addTo(map_init);
 
-  accuracy = 3673.307411212622;
   let circle = L.circle(coordinates, { radius: accuracy }).addTo(map_init);
   // @ViewChild('map') mapContainer;
 

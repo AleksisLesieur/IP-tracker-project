@@ -1,9 +1,5 @@
 let marker = "";
 
-const main = document.querySelector("main");
-
-let toggle = true;
-
 document.addEventListener("DOMContentLoaded", entireProject);
 
 const dataIP = document.querySelector(".data-ip");
@@ -54,7 +50,7 @@ async function newSearch() {
     }
   }
   resizing();
-  accuracy = 1673.307411212622;
+  accuracy = 3673.307411212622;
   let circle = L.circle(coordinates, { radius: accuracy }).addTo(map_init);
 
   apiCallsLeft();
@@ -157,7 +153,7 @@ async function entireProject() {
   console.log(osm);
   L.Control.geocoder().addTo(map_init);
 
-  accuracy = 1673.307411212622;
+  accuracy = 3673.307411212622;
   let circle = L.circle(coordinates, { radius: accuracy }).addTo(map_init);
   // @ViewChild('map') mapContainer;
 
@@ -170,5 +166,5 @@ async function entireProject() {
 }
 
 console.log(
-  "Hello there! It's Aleksis, the developer of this application! Just wanted to let you know that I'm aware the amount of API calls left do not appear, I'm currently fixing this. However, it's still possible to see it! All you have to do is enable CORS in your browser, that is all!"
+  "Hello there! It's Aleksis, the developer of this application! Just wanted to let you know that I'm aware the amount of API calls left do not appear, I'm currently fixing this... However! If you enable CORS in your browser, it will work! that is all! thank you very much!"
 );

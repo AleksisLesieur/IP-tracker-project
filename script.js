@@ -166,5 +166,5 @@ async function entireProject() {
 }
 
 console.log(
-  "Hello there! It's Aleksis, the developer of this application! Just wanted to let you know that I'm aware the amount of API calls left do not appear, I'm currently fixing this... However! If you enable CORS in your browser, it will work! Also, fixing the accuracy part too! that is all! thank you very much!"
+  "Hello there! It's Aleksis, the developer of this application! Just wanted to let you know that I'm aware the amount of API calls left do not appear, I'm currently fixing this... However! If you enable CORS in your browser, it will work! That is all! thank you very much!"
 );

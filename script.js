@@ -11,19 +11,19 @@ const svg = document.querySelector("svg");
 
 let amountLeft = 0;
 
-let accuracy = 3673.307411212622;
+let accuracy = 2673.307411212622;
 
-async function apiCallsLeft() {
-  await fetch(
-    "https://geo.ipify.org/service/account-balance?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN"
-  )
-    .then((res) => res.json())
-    .then(function (data) {
-      amountLeft = data.credits;
-    });
-  dataCalls.innerHTML = Math.trunc(amountLeft / 2);
-}
-apiCallsLeft();
+// async function apiCallsLeft() {
+//   await fetch(
+//     "https://geo.ipify.org/service/account-balance?apiKey=at_zVKFWWrUbDoqOAgXEXq6r5SMbTGQN"
+//   )
+//     .then((res) => res.json())
+//     .then(function (data) {
+//       amountLeft = data.credits;
+//     });
+//   dataCalls.innerHTML = Math.trunc(amountLeft / 2);
+// }
+// apiCallsLeft();
 
 async function newSearch() {
   let result;
@@ -162,9 +162,5 @@ async function entireProject() {
     .bindPopup("you are somewhere here...")
     .openPopup();
 
-  apiCallsLeft();
 }
 
-console.log(
-  "Hello there! It's Aleksis, the developer of this application! Just wanted to let you know that I'm aware the amount of API calls left do not appear, I'm currently fixing this... However! If you enable CORS in your browser, it will work! That is all! thank you very much!"
-);
